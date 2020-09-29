@@ -147,8 +147,9 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
 
-STATIC_URL = '/static/'
-STATICFILES_DIRS = (os.path.join(BASE_DIR, 'static'),)
+STATIC_URL = '/static/' # the prefix that django uses as a keyword for searching for static files
+STATICFILES_DIRS = (os.path.join(BASE_DIR, 'static'),) # tells django where to find any static files that exist outside an app directory
+""" STATIC_ROOT = # location where all static files are collected together (when collectstatic is run) """
 
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
